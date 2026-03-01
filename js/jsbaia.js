@@ -162,10 +162,9 @@ jQuery(document).ready(function($) {
 
   // 2) Sostituisce il contenuto di <ul class="contact"> con il nuovo codice
   $('ul.contact').html(
-    '<li><a href="https://maps.app.goo.gl/tF9uDrbXbFaLMZVVA" target="_blank" style="font-size: 20px;"><i class="fas fa-map-marker-alt"></i></a></li>' +
-    '<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lun - Dom: 09:00 - 22:00</font></font></li>' +
-    /* '<li><a href="" target="_blank" style="font-size: 20px;"><i class="fas fa-envelope"></i></a></li>' + */
-    '<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEL: +39 347 565 6722</font></font></font></a></font></li>'
+        '<li><a href="https://maps.app.goo.gl/tF9uDrbXbFaLMZVVA" target="_blank" style="font-size:20px;"><i class="fas fa-map-marker-alt"></i></a></li>' +
+        '<li>Lun - Dom: 09:00 - 22:00</li>' +
+        '<li>TEL: +39 347 565 6722</li>'
   );
 });;
 (function () {
@@ -528,7 +527,6 @@ jQuery(document).ready(function($) {
      * Media Embed dimensions
      * 
      * Youtube, Vimeo, Iframe, Video, Audio.
-     * @author Chinh Duong Manh
      */
     function alacarte_video_size() {
         'use strict';
