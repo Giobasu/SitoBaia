@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" width="440" height="440">
+  <g fill="none" stroke="#1a8a7d" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Pediment triangle -->
+    <path d="M98,196 C138,174 186,118 222,80 C258,118 306,174 344,196"/>
+    <!-- Decorative circle in pediment -->
+    <circle cx="222" cy="150" r="16"/>
+    <!-- Entablature beam -->
+    <path d="M88,200 C170,198 280,202 354,200"/>
+    <!-- Column capitals -->
+    <path d="M132,204 L168,204"/>
+    <path d="M206,204 L238,204"/>
+    <path d="M276,204 L312,204"/>
+    <!-- Left column -->
+    <path d="M150,208 C149,252 151,310 150,346"/>
+    <!-- Center column -->
+    <path d="M222,208 C221,252 223,310 222,346"/>
+    <!-- Right column -->
+    <path d="M294,208 C293,252 295,310 294,346"/>
+    <!-- Column bases -->
+    <path d="M134,346 L166,346"/>
+    <path d="M206,346 L238,346"/>
+    <path d="M278,346 L310,346"/>
+    <!-- Top step -->
+    <path d="M86,354 C165,352 280,356 356,354"/>
+    <!-- Bottom step -->
+    <path d="M68,382 C158,380 290,384 374,382"/>
+  </g>
+</svg>

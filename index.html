@@ -592,7 +592,7 @@
         .wpcf7-list-item-label {
             font-style: normal;
             font-weight: 500;
-            font-size: 13px;
+            font-size: 16px;
             line-height: 28px;
             letter-spacing: 0.5px;
             font-family: 'Oswald', sans-serif;
@@ -606,6 +606,22 @@
 
         .red-heading-wrap .small-heading {
             font-family: 'Oswald' !important;
+        }
+
+        .red-social a:has(.social-icon-img) {
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-icon-img {
+            width: 18px;
+            height: 18px;
+            display: block;
+        }
+
+        .social-footer .social-icon-img {
+            filter: brightness(0) invert(1);
         }
     </style>
     
@@ -802,6 +818,7 @@
             display: flex;
             flex-wrap: wrap;
             align-items: stretch;
+            justify-content: center;
         }
 
         .vc_custom_1706538339653 .row > .wpb_column {
@@ -864,19 +881,33 @@
     </style>
     
     <style>
+        .vc_row-o-full-height {
+            min-height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .vc_row-o-full-height > .wpb_column {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
         .prenota-ora-btn {
             display: inline-block;
             padding: 14px 42px;
             background-color: rgba(21, 111, 115, 0.85);
             color: #fff !important;
             font-family: 'Oswald', sans-serif;
-            font-size: 18px;
+            font-size: 22px;
             font-weight: 500;
             letter-spacing: 1.5px;
             text-transform: uppercase;
             text-decoration: none !important;
             border: 2px solid #fff;
             transition: background-color 0.3s, transform 0.3s;
+            position: relative;
+            z-index: 3;
+            cursor: pointer;
         }
         .prenota-ora-btn:hover {
             background-color: #0e5457;
@@ -884,7 +915,7 @@
         }
         @media (max-width: 768px) {
             .prenota-ora-btn {
-                font-size: 15px;
+                font-size: 18px;
                 padding: 12px 32px;
             }
         }
@@ -970,21 +1001,19 @@
     <noscript></noscript>
 </head>
 
-<body class="home wp-singular page-template-default page page-id-3527 wp-theme-alacarte theme-alacarte woocommerce-no-js header-1 side-header-ontop site-boxed site-custom-vc-row wpb-js-composer js-comp-ver-6.1 vc_responsive">
+<body class="home wp-singular page-template-default page page-id-3527 wp-theme-alacarte theme-alacarte woocommerce-no-js header-1 side-header-ontop site-custom-vc-row wpb-js-composer js-comp-ver-6.1 vc_responsive">
     
     <div id="red-page" class="red-page page-header-1  page-header-ontop">
         
         <div id="red-header-top" class="red-header-top ">
             <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row row wpb_row vc_row-fluid vc_row-no-padding row-overfolow-initial">
-                <div class="wpb_column vc_column_container col-md-10 col-lg-8 vc_hidden-sm vc_hidden-xs">
+                <div class="wpb_column vc_column_container col-md-10 col-lg-8">
                     <div class="vc_column-inner">
                         <div class="wpb_wrapper">
                             <div class="wpb_raw_code wpb_content_element wpb_raw_html ">
                                 <div class="wpb_wrapper">
                                     <ul class="contact">
-                                        <li>INDIRIZZO : Località Castreccioni, 44, 62011 Cingoli MC</li>
-                                        <li>Lun - Dom: 09:00 - 22:00</li>
-                                        <li></li>
+                                        <li data-i18n="opening_time">Lun - Dom: 09:00 - 22:00</li>
                                     </ul>
                                 </div>
                             </div>
@@ -994,8 +1023,10 @@
                 <div class="wpb_column vc_column_container col-md-2 col-lg-4 text-right">
                     <div class="vc_column-inner">
                         <div class="wpb_wrapper">
-                            <div class="red-social size-28 ">
-                                <a href="https://www.facebook.com/baiadipopeyelagodicingoli" target="_blank"><span class="social-icon fab fa-facebook-f"></span></a>
+                            <div class="red-social size-28 social-header">
+                                <a href="https://www.facebook.com/baiadipopeyelagodicingoli" target="_blank" class="social-link social-facebook"><img src="images/facebook-icon.svg" alt="Facebook" class="social-icon-img"></a>
+                                <a href="https://www.instagram.com/baiadipopeye_lago_di_cingoli/" target="_blank" class="social-link social-instagram"><img src="images/instagram-icon.svg" alt="Instagram" class="social-icon-img"></a>
+                                <a href="https://maps.app.goo.gl/tF9uDrbXbFaLMZVVA" target="_blank" class="social-link social-googlemaps"><img src="images/maps-icon.svg" alt="Google Maps" class="social-icon-img"></a>
                             </div>
                             <div class="vc_wp_custommenu wpb_content_element lang-menu">
                                 <div class="lang-switch" id="lang-switch" onclick="toggleLanguage()">
@@ -1076,13 +1107,14 @@
                                                 <div class="vc_column-inner">
                                                     <div class="wpb_wrapper">
                                                         <div id="esp1597908786829-f1184881-1af4" class="red-empty-space"></div>
-                                                        <div class="red-fancybox red-fancybox-3 transition red-line-corner-wrap red-bg">
+                                                        <div class="red-fancybox red-fancybox-3 transition red-line-corner-wrap red-bg" style="cursor:pointer" onclick="openServiceModal('ristorante')">
                                                             <div class="red-fancy-icon-wrap">
-                                                                <div class="red-fancybox-icon transition icon-box square text-accent  red-bg-"> <img fetchpriority="high" decoding="async" width="440" height="440" src="images/calice.png" class="red-pricing-img" alt="" srcset="images/calice.png 440w, images/calice-110x110.png 110w" sizes="(max-width: 440px) 100vw, 440px"></div>
+                                                                <div class="red-fancybox-icon transition icon-box square text-accent  red-bg-"> <img fetchpriority="high" decoding="async" width="440" height="440" src="images/calice-icon.svg" class="red-pricing-img" alt="" sizes="(max-width: 440px) 100vw, 440px"></div>
                                                             </div>
                                                             <div class="fancy-right">
-                                                                <div class="red-fancybox-heading red-heading" data-i18n="bar_title">BAR e HAPPY HOUR</div>
-                                                                <div class="desc" data-i18n="bar_desc">Una selezione di drink alcolici e analcolici per tutti i gusti</div>
+                                                                <div class="red-fancybox-heading red-heading" data-i18n="bar_title">RISTORANTE E BAR</div>
+                                                                <div class="desc" data-i18n="bar_desc">Cucina marchigiana, crescia, drink e aperitivo al tramonto</div>
+                                                                <a href="files/Menu-Baia-di-Popeye.pdf" target="_blank" onclick="event.stopPropagation()" style="display:inline-block; margin-top:8px; color:#c89d5e; font-weight:600; text-decoration:underline; font-size:14px;" data-i18n="menu_link">Scopri il nostro menù</a>
                                                                 <footer class="red-fancy-footer"></footer>
                                                             </div>
                                                         </div>
@@ -1093,14 +1125,14 @@
                                                 <div class="vc_column-inner">
                                                     <div class="wpb_wrapper">
                                                         <div id="esp1571364772170-fd72a321-af05" class="red-empty-space"></div>
-                                                        <div class="red-fancybox red-fancybox-3 transition red-line-corner-wrap red-bg">
+                                                        <div class="red-fancybox red-fancybox-3 transition red-line-corner-wrap red-bg" style="cursor:pointer" onclick="openServiceModal('spiaggia')">
                                                             <div class="red-fancy-icon-wrap">
                                                                 <div class="red-fancybox-icon transition icon-box square text-accent  red-bg-"> <img decoding="async" width="440" height="440" src="images/ombrellone.png" class="red-pricing-img" alt="" srcset="images/ombrellone.png 440w, images/ombrellone110x110.png 110w" sizes="(max-width: 440px) 100vw, 440px"></div>
                                                             </div>
                                                             <div class="fancy-right">
                                                                 <div class="red-fancybox-heading red-heading" data-i18n="beach_title">SPIAGGIA</div>
-                                                                <div class="desc" data-i18n="beach_desc">Noleggio lettini, ombrelloni, pedalò e canoe</div>
-                                                                <footer class="red-fancy-footer"></a></footer>
+                                                                <div class="desc" data-i18n="beach_desc">Noleggio di lettini e ombrelloni a 1€/ora</div>
+                                                                <footer class="red-fancy-footer"></footer>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1110,13 +1142,14 @@
                                                 <div class="vc_column-inner">
                                                     <div class="wpb_wrapper">
                                                         <div id="esp1571364886558-3258a5ac-efa3" class="red-empty-space"></div>
-                                                        <div class="red-fancybox red-fancybox-3 transition red-line-corner-wrap red-bg">
+                                                        <div class="red-fancybox red-fancybox-3 transition red-line-corner-wrap red-bg" style="cursor:pointer" onclick="openServiceModal('noleggi')">
                                                             <div class="red-fancy-icon-wrap">
                                                                 <div class="red-fancybox-icon transition icon-box square text-accent  red-bg-"> <img decoding="async" width="440" height="440" src="images/barca.png" class="red-pricing-img" alt="" srcset="images/barca.png 440w, images/barca110x110.png 110w" sizes="(max-width: 440px) 100vw, 440px"></div>
                                                             </div>
                                                             <div class="fancy-right">
-                                                                <div class="red-fancybox-heading red-heading" data-i18n="boat_title">RIMESSA NATANTI</div>
-                                                                <div class="desc" data-i18n="boat_desc">Attracca la tua barca nel nostro pontile per tutta la durata della pesca nel nostro posto riservato custodito non assicurato</div>
+                                                                <div class="red-fancybox-heading red-heading" data-i18n="boat_title">NOLEGGI IN ACQUA</div>
+                                                                <div class="desc" data-i18n="boat_desc">Noleggio di pedalò, canoe e water bike, offriamo anche il servizio di rimessa natanti!</div>
+                                                                <!-- Attracca la tua barca nel nostro pontile per tutta la durata della pesca nel nostro posto riservato custodito non assicurato -->
                                                                 <footer class="red-fancy-footer"></footer>
                                                             </div>
                                                         </div>
@@ -1127,13 +1160,64 @@
                                                 <div class="vc_column-inner">
                                                     <div class="wpb_wrapper">
                                                         <div id="esp1597139848070-36836b71-b0d1" class="red-empty-space"></div>
-                                                        <div class="red-fancybox red-fancybox-3 transition red-line-corner-wrap red-bg">
+                                                        <div class="red-fancybox red-fancybox-3 transition red-line-corner-wrap red-bg" style="cursor:pointer" onclick="openServiceModal('pet')">
                                                             <div class="red-fancy-icon-wrap">
                                                                 <div class="red-fancybox-icon transition icon-box square text-accent  red-bg-"> <img decoding="async" width="440" height="440" src="images/cane.png" class="red-pricing-img" alt="" srcset="images/cane.png 440w, images/cane-110x110.png 110w" sizes="(max-width: 440px) 100vw, 440px"></div>
                                                             </div>
                                                             <div class="fancy-right">
-                                                                <div class="red-fancybox-heading red-heading" data-i18n="welcome_title">TUTTI BENVENUTI</div>
-                                                                <div class="desc" data-i18n="welcome_desc">Abbiamo a disposizione un parco giochi per i bambini ed un area riservata ai cani</div>
+                                                                <div class="red-fancybox-heading red-heading" data-i18n="welcome_title">PET FRIENDLY</div>
+                                                                <div class="desc" data-i18n="welcome_desc">I vostri amici a 4 zampe sono sempre i benvenuti! La nostra area cani è sempre aperta a loro e possono persino salire con voi sul pedalò! </div>
+                                                                <footer class="red-fancy-footer"></footer>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="wpb_column vc_column_container col-md-3">
+                                                <div class="vc_column-inner">
+                                                    <div class="wpb_wrapper">
+                                                        <div class="red-empty-space"></div>
+                                                        <div class="red-fancybox red-fancybox-3 transition red-line-corner-wrap red-bg" style="cursor:pointer" onclick="openServiceModal('museo')">
+                                                            <div class="red-fancy-icon-wrap">
+                                                                <div class="red-fancybox-icon transition icon-box square text-accent  red-bg-"> <img decoding="async" width="440" height="440" src="images/museo-icon.svg" class="red-pricing-img" alt="" sizes="(max-width: 440px) 100vw, 440px"></div>
+                                                            </div>
+                                                            <div class="fancy-right">
+                                                                <div class="red-fancybox-heading red-heading" data-i18n="museo_lago_title">MUSEO LAGO</div>
+                                                                <div class="desc" data-i18n="museo_lago_desc">All'interno dell'attività troverete foto e documenti raccolti da noi e testimonianze dal 1981 ad oggi.</div>
+                                                                <footer class="red-fancy-footer"></footer>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="wpb_column vc_column_container col-md-3">
+                                                <div class="vc_column-inner">
+                                                    <div class="wpb_wrapper">
+                                                        <div class="red-empty-space"></div>
+                                                        <div class="red-fancybox red-fancybox-3 transition red-line-corner-wrap red-bg" style="cursor:pointer" onclick="openServiceModal('servizi')">
+                                                            <div class="red-fancy-icon-wrap">
+                                                                <div class="red-fancybox-icon transition icon-box square text-accent  red-bg-"> <img decoding="async" width="440" height="440" src="images/servizi-gratuiti-icon.svg" class="red-pricing-img" alt="" sizes="(max-width: 440px) 100vw, 440px"></div>
+                                                            </div>
+                                                            <div class="fancy-right">
+                                                                <div class="red-fancybox-heading red-heading" data-i18n="servizi_gratuiti_title">SERVIZI GRATUITI</div>
+                                                                <div class="desc" data-i18n="servizi_gratuiti_desc">Offriamo un campo da beach volley gratuito e per i bambini un parco giochi e attività ricreative</div>
+                                                                <footer class="red-fancy-footer"></footer>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="wpb_column vc_column_container col-md-3">
+                                                <div class="vc_column-inner">
+                                                    <div class="wpb_wrapper">
+                                                        <div class="red-empty-space"></div>
+                                                        <div class="red-fancybox red-fancybox-3 transition red-line-corner-wrap red-bg" style="cursor:pointer" onclick="openServiceModal('territorio')">
+                                                            <div class="red-fancy-icon-wrap">
+                                                                <div class="red-fancybox-icon transition icon-box square text-accent  red-bg-"> <img decoding="async" width="440" height="440" src="images/territorio-icon.svg" class="red-pricing-img" alt="" sizes="(max-width: 440px) 100vw, 440px"></div>
+                                                            </div>
+                                                            <div class="fancy-right">
+                                                                <div class="red-fancybox-heading red-heading" data-i18n="territorio_title">SCOPRI IL TERRITORIO</div>
+                                                                <div class="desc" data-i18n="territorio_desc">Scopri le bellezze che offrono le Marche a pochi Km da noi.</div>
                                                                 <footer class="red-fancy-footer"></footer>
                                                             </div>
                                                         </div>
@@ -1144,122 +1228,48 @@
                                     </div>
                                 </div>
                                 <div class="vc_row-full-width vc_clearfix"></div>
-                                <div class="container">
-                                    <div id="baia-section" class="vc_row row wpb_row vc_row-fluid">
-                                        <div class="wpb_column vc_column_container col-md-12">
-                                            <div class="vc_column-inner">
-                                                <div class="wpb_wrapper">
-                                                    <div id="esp1566025133443-5578bdfd-cbb5" class="red-empty-space"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row row wpb_row vc_row-fluid wpb_animate_when_almost_visible wpb_bottom-to-top bottom-to-top vc_custom_1713368799062 vc_row-o-equal-height vc_row-o-content-middle vc_row-flex">
+                                <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row row wpb_row vc_row-fluid wpb_animate_when_almost_visible wpb_bottom-to-top bottom-to-top">
                                     <div class="container clearfix">
-                                        <div class="row align-items-center">
-                                            <div class="wpb_column vc_column_container col-md-6 col-lg-3/5">
-                                                <div class="vc_column-inner vc_custom_1572060052832">
-                                                    <div class="wpb_wrapper">
-                                                        <div class="wpb_gallery wpb_content_element vc_clearfix ">
-                                                            <div class="wpb_wrapper">
-                                                                <div class="wpb_gallery_slides wpb_image_grid" data-interval="3">
-                                                                    <ul class="wpb_image_grid_ul">
-                                                                        <li class="isotope-item"><img decoding="async" width="1600" height="1320" src="images/museo.png" class="attachment-full" alt="" srcset="images/museo.png 1600w, images/museo-768x634.png 768w, images/museo-1536x1267.png 1536w" sizes="(max-width: 1600px) 100vw, 1600px"></li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="wpb_column vc_column_container col-md-6 col-lg-2/5">
-                                                <div class="vc_column-inner vc_custom_1564629967044">
-                                                    <div class="wpb_wrapper">
-                                                        <div class="red-heading-wrap red-heading-1 text-start ">
-                                                            <h5 class="small-heading" style="color:#777777" data-i18n="museum_sub">BAIA DI POPEYE PRESENTA</h5>
-                                                            <h3 class="heading red-heading text-custom" style="color:#111111" data-i18n="museum_title">Museo del Lago di Castreccioni </h3>
-                                                            <div class="desc ">
-                                                                <b></b>
-                                                                <br>
-                                                                <p data-i18n="museum_desc">La Baia di Popeye presenta , uno spazio espositivo che racconta, attraverso fotografie e documenti storici,
-                                                                     la nascita dell'invaso artificiale sul fiume Musone, nel comune di Cingoli (MC), realizzato tra il 1981 e il 1988 con la costruzione di una diga alta 67 metri e capace di creare un bacino di 240 ettari.
-                                                                     I reperti, raccolti anche grazie al contributo della comunità, offrono un viaggio nel passato per scoprire come l'ingegno umano e il rispetto per la natura abbiano dato vita a questo paradiso terrestre.
-                                                                     Il museo invita chiunque abbia foto o documenti dell'epoca a condividerli per esporli con la propria firma, e a seguire i social con gli hashtag #BaiaDiPopeye e #LakePeople per rimanere aggiornati.</p>
-                                                                <p></p>
-                                                            </div>
-                                                        </div>
-                                                        <div id="esp1564557024606-68c27bb2-10f2" class="red-empty-space"></div>
-                                                        <div class="red-btn-wrap block ">
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="vc_row-full-width vc_clearfix"></div>
-                                <div class="container">
-                                    <div class="vc_row row wpb_row vc_row-fluid">
-                                        <div class="wpb_column vc_column_container col-md-12">
-                                            <div class="vc_column-inner">
-                                                <div class="wpb_wrapper">
-                                                    <div id="esp1566027197823-50670eb8-f614" class="red-empty-space"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="container">
-                                    <div class="vc_row row wpb_row vc_row-fluid">
-                                        <div class="wpb_column vc_column_container col-md-12">
-                                            <div class="vc_column-inner">
-                                                <div class="wpb_wrapper">
-                                                    <div id="esp1566028768591-371caa65-e07b" class="red-empty-space"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="container">
-                                    <div class="vc_row row wpb_row vc_row-fluid">
-                                        <div class="wpb_column vc_column_container col-md-12">
-                                            <div class="vc_column-inner">
-                                                <div class="wpb_wrapper">
-                                                    <div class="vc_empty_space" style="height: 40px"><span class="vc_empty_space_inner"></span></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row row wpb_row vc_row-fluid firma-background wpb_animate_when_almost_visible wpb_bottom-to-top bottom-to-top vc_custom_1720443400191 has-fill vc_row-o-equal-height vc_row-o-content-bottom vc_row-flex">
-                                    <div class="container clearfix">
-                                        <div class="row align-items-end">
-                                            <div class="wpb_column vc_column_container col-md-4">
+                                        <div class="row ">
+                                            <div class="wpb_column vc_column_container col-md-12">
                                                 <div class="vc_column-inner">
                                                     <div class="wpb_wrapper">
-                                                        <div class="red-heading-wrap red-heading-1 text-start ">
-                                                            <h5 class="small-heading" style="color:#777777" data-i18n="food_sub">I Nostri piatti delle </h5>
-                                                            <h3 class="heading red-heading text-custom" style="color:#111111" data-i18n="food_title">MARCHE</h3>
+                                                        <div class="vc_empty_space" style="height: 60px"><span class="vc_empty_space_inner"></span></div>
+                                                        <div class="red-heading-wrap red-heading-1 " style="text-align:center;">
+                                                            <h3 class="heading red-heading text-custom" style="color:#111111; font-size:50px;">Baia di Popeye</h3>
+                                                            <h5 class="small-heading" style="color:#777777; font-size:22px; margin-top:8px;">Un punto di riferimento per le Marche, tutti i giorni tutto l'anno</h5>
                                                         </div>
-                                                        <div class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1720442355314  chef-photo vc_box_border_grey">
-                                                            <figure class="wpb_wrapper vc_figure">
-                                                                <div class="vc_single_image-wrapper   vc_box_border_grey"><img decoding="async" width="1066" height="1000" src="images/tagliere.jpg" class="vc_single_image-img attachment-full" alt="" srcset="images/tagliere.jpg 1066w, images/tagliere768x720.jpg 768w" sizes="(max-width: 1066px) 100vw, 1066px"></div>
-                                                            </figure>
+                                                        <div class="vc_empty_space" style="height: 30px"><span class="vc_empty_space_inner"></span></div>
+                                                        <div class="wpb_text_column wpb_content_element" style="max-width:820px; margin:0 auto; text-align:center; font-size:22px; line-height:1.8;">
+                                                            <div class="wpb_wrapper">
+                                                                <p>La Baia di Popeye è un'attività nata nel 1987 sulle rive del Lago di Cingoli.<br>
+                                                                Nel 2016 è stata acquistata da Samuele e Cristina, soci nella vita e nel lavoro, e completamente ristrutturata in soli 28 giorni.</p>
+
+                                                                <p>Da allora è diventata un punto di riferimento per il territorio, non solo nei mesi estivi ma durante tutto l'anno.<br>
+                                                                La Baia è infatti aperta tutti i giorni, con cucina e servizi pensati per accogliere visitatori, famiglie, sportivi e amanti della natura in ogni stagione.</p>
+
+                                                                <p><strong>Oggi la Baia di Popeye offre diversi servizi:</strong></p>
+
+                                                                <div style="text-align:center; max-width:620px; margin:0 auto;">
+                                                                    <p>Ristorante con cucina aperta con orario continuato dalle 9 alle 22<br>
+                                                                    Cocktail bar con aperitivi al tramonto e cene vista lago<br>
+                                                                    Spiaggia privata con lettini e ombrelloni e zona di spiaggia libera<br>
+                                                                    Noleggio canoe, kayak e water bike, oltre alla rimessa natanti per chi possiede una barca o pratica pesca sul lago<br>
+                                                                    Area cani con spazio dedicato e percorso di sgambamento<br>
+                                                                    Parco giochi per bambini<br>
+                                                                    Campo da beach volley gratuito<br>
+                                                                    Dalla Baia di Popeye si possono vedere i tramonti più belli di tutte le Marche, una delle location più Instagrammabili scelte dai fotografi anche per fotografare la Via Lattea e le costellazioni</p>
+                                                                </div>
+
+                                                                <p>La Baia nasce con un'idea semplice:<br>
+                                                                offrire a chi arriva sul lago un luogo dove fermarsi, vivere il paesaggio e sentirsi a casa.</p>
+
+                                                                <p><strong>Un punto di approdo per ogni visitatore.<br>
+                                                                Un riferimento per il territorio.<br>
+                                                                Un piccolo faro sulle rive del Lago di Cingoli.</strong></p>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="wpb_column vc_column_container col-md-8">
-                                                <div class="vc_column-inner vc_custom_1720443444976">
-                                                    <div class="wpb_wrapper">
-                                                        <div class="red-heading-wrap red-heading-1 text-start ">
-                                                            <div class="desc " data-i18n="food_desc">Il nostro menù nasce dall’amore per la cucina marchigiana e dalla voglia di farla conoscere a chi passa dal lago, che sia per una giornata di relax o per una cena in compagnia. Proponiamo piatti semplici ma curati, legati al territorio e alle sue tradizioni, pensati per mettere tutti d’accordo. Le protagoniste sono le cresce calde, da aprire e farcire come una volta, accompagnate da taglieri ricchi di affettati locali, formaggi e specialità che raccontano i sapori autentici delle Marche. Accanto alla tradizione, ci divertiamo a proporre hamburger rivisitati con ingredienti del territorio: pane fragrante, carni selezionate e abbinamenti che uniscono gusto e creatività senza perdere genuinità.La nostra cucina non vuole stupire con effetti speciali, ma far sentire a casa. Ogni piatto nasce dall’idea di condividere, di riempire la tavola e di creare quel clima semplice e allegro che rende speciale anche una serata qualunque. Per noi cucinare significa accogliere, raccontare il territorio e trasformare ogni pasto in un momento da vivere insieme, tra profumi veri e sapori che restano nel cuore.</div>
-                                                            <br>
-                                                            
-                                                            <a class="red-btn-link accent-color simple red-btn-df icon-right transition red-scroll" href="files/Menu-Baia-di-Popeye.pdf" data-title="Scopri il nostro Menù" target="_blank"> <span class="btn-title" data-i18n="menu_btn">Scopri il nostro Menù</span> </a>
-                                                        </div>
+                                                        <div class="vc_empty_space" style="height: 60px"><span class="vc_empty_space_inner"></span></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1369,12 +1379,14 @@
                                     <div id="esp1562904049900-ccb212fe-5407" class="red-empty-space"></div>
                                     <div class="wpb_text_column wpb_content_element   ">
                                         <div class="wpb_wrapper" style="color:#ffffff;">
-                                            <p>Località Castreccioni, 44, 62011 Cingoli (MC)<br> Email : pavacri93@gmail.com<br> Tel: +39 347 565 6722<br> Partita IVA: 02736560067</p>
+                                            <p>Località Castreccioni, 44, 62011 Cingoli (MC)<br> Tel: +39 347 565 6722<br> Partita IVA: 02736560067</p>
                                         </div>
                                     </div>
                                     <div id="esp1562904095291-d87d2bf2-1983" class="red-empty-space"></div>
-                                    <div class="red-social white shape-circle size-28 text-center">
-                                        <a href="https://www.facebook.com/baiadipopeyelagodicingoli" target="_blank"><span class="social-icon fab fa-facebook-f"></span></a>
+                                    <div class="red-social white shape-circle size-28 text-center social-footer">
+                                        <a href="https://www.facebook.com/baiadipopeyelagodicingoli" target="_blank" class="social-link social-facebook"><img src="images/facebook-icon.svg" alt="Facebook" class="social-icon-img"></a>
+                                        <a href="https://www.instagram.com/baiadipopeye_lago_di_cingoli/" target="_blank" class="social-link social-instagram"><img src="images/instagram-icon.svg" alt="Instagram" class="social-icon-img"></a>
+                                        <a href="https://maps.app.goo.gl/tF9uDrbXbFaLMZVVA" target="_blank" class="social-link social-googlemaps"><img src="images/maps-icon.svg" alt="Google Maps" class="social-icon-img"></a>
                                     </div>
                                     <div id="esp1562904117697-e3f3ab61-f67e" class="red-empty-space"></div>
                                     <div class="wpb_text_column wpb_content_element   ">
@@ -1615,6 +1627,147 @@
     <script src="js/i18n.min.js" id="wp-i18n-js"></script>
     
     <div class="red-inline-css" data-css="@media   (max-width: 767px) {#esp1597908786829-f1184881-1af4 {height:50px;}}@media   (max-width: 767px) {#esp1571364772170-fd72a321-af05 {height:50px;}}@media   (max-width: 767px) {#esp1571364886558-3258a5ac-efa3 {height:50px;}}@media   (max-width: 767px) {#esp1597139848070-36836b71-b0d1 {height:50px;}}@media   (max-width: 767px) {#esp1566025133443-5578bdfd-cbb5 {height:15px;}} @media (min-width: 768px) and (max-width: 4800px) {#esp1566025133443-5578bdfd-cbb5 {height:20px;}}@media (min-width: 767px) and (max-width: 4800px) {#esp1564557024606-68c27bb2-10f2 {height:20px;}}@media   (max-width: 768px) {#esp1566027197823-50670eb8-f614 {height:40px;}} @media (min-width: 767px) and (max-width: 4800px) {#esp1566027197823-50670eb8-f614 {height:80px;}}@media   (max-width: 768px) {#esp1566028768591-371caa65-e07b {height:40px;}} @media   (max-width: 767px) {#esp1566028768591-371caa65-e07b {height:30px;}}@media (min-width: 768px) and (max-width: 4800px) {#esp1600851755064-0b19db69-bad9 {height:40px;}} @media (min-width: 768px) and (max-width: 767px) {#esp1600851755064-0b19db69-bad9 {height:40px;}}@media   (max-width: 4800px) {#esp1562904022540-63ebd125-f0c6 {height:36px;}}@media   (max-width: 4800px) {#esp1562904049900-ccb212fe-5407 {height:33px;}}@media   (max-width: 4800px) {#esp1562904095291-d87d2bf2-1983 {height:40px;}}@media   (max-width: 4800px) {#esp1562904117697-e3f3ab61-f67e {height:27px;}}@media   (max-width: 4800px) {#esp1596819190922-77dd57af-66e7 {height:27px;}}"></div>
+    <!-- Service Cards Vertical Layout -->
+    <style>
+    .red-fancybox-3 {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+    }
+    .red-fancybox-3 .red-fancy-icon-wrap {
+        flex: 0 0 auto !important;
+        max-width: 130px !important;
+        margin-top: 0 !important;
+        margin-bottom: 10px;
+    }
+    .red-fancybox-3 .fancy-right {
+        flex: 0 0 auto !important;
+        max-width: 100% !important;
+    }
+    </style>
+
+    <!-- Service Modals -->
+    <style>
+    .service-modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.7);
+        z-index: 99999;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .service-modal-overlay.active {
+        display: flex;
+        opacity: 1;
+    }
+    .service-modal {
+        background: #fff;
+        border-radius: 12px;
+        max-width: 700px;
+        width: 90%;
+        max-height: 85vh;
+        overflow-y: auto;
+        position: relative;
+        transform: translateY(30px);
+        transition: transform 0.3s ease;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    .service-modal-overlay.active .service-modal {
+        transform: translateY(0);
+    }
+    .service-modal-close {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 28px;
+        cursor: pointer;
+        color: #333;
+        background: none;
+        border: none;
+        z-index: 10;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: background 0.2s;
+    }
+    .service-modal-close:hover {
+        background: rgba(0,0,0,0.1);
+    }
+    .service-modal-images {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        padding: 30px 30px 0;
+    }
+    .service-modal-images img {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+        flex-shrink: 0;
+    }
+    .service-modal-images.single-image img {
+        width: 100%;
+    }
+    .service-modal-images.multi-image img {
+        width: 48%;
+    }
+    .service-modal-body {
+        padding: 25px 30px 30px;
+    }
+    .service-modal-body h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        color: #111;
+        margin: 0 0 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .service-modal-body p {
+        font-family: futurabook, 'Lato', sans-serif;
+        font-size: 18px;
+        line-height: 1.7;
+        color: #555;
+        margin: 0 0 12px;
+    }
+    @media (max-width: 600px) {
+        .service-modal-images {
+            padding: 20px 20px 0;
+        }
+        .service-modal-body {
+            padding: 20px;
+        }
+        .service-modal-images.multi-image img {
+            width: 100%;
+        }
+        .service-modal-body h2 {
+            font-size: 24px;
+        }
+    }
+    </style>
+
+    <div class="service-modal-overlay" id="serviceModalOverlay" onclick="closeServiceModal(event)">
+        <div class="service-modal">
+            <button class="service-modal-close" onclick="closeServiceModal(event, true)">&times;</button>
+            <div class="service-modal-images" id="serviceModalImages"></div>
+            <div class="service-modal-body">
+                <h2 id="serviceModalTitle"></h2>
+                <div id="serviceModalText"></div>
+            </div>
+        </div>
+    </div>
+
     <script defer="" src="js/jsbaia.js"></script>
     <script>
     var currentLang = 'it';
@@ -1622,46 +1775,143 @@
         en: {
             intro_sub: "La Baia di Popeye is not just a restaurant...",
             services_title: "Our services",
-            bar_title: "BAR & HAPPY HOUR",
-            bar_desc: "A selection of alcoholic and non-alcoholic drinks for every taste",
+            bar_title: "RESTAURANT & BAR",
+            bar_desc: "Traditional cuisine, crescia marchigiana, drinks and sunset aperitivo",
+            menu_link: "Discover our menu",
             beach_title: "BEACH",
-            beach_desc: "Sunbed, umbrella, pedal boat and canoe rental",
-            boat_title: "BOAT STORAGE",
+            beach_desc: "Sun loungers and umbrellas from 1\u20AC/hour",
+            boat_title: "WATER RENTALS",
             boat_desc: "Dock your boat at our pier for the entire duration of your fishing trip in our reserved, supervised, uninsured spot",
-            welcome_title: "EVERYONE IS WELCOME",
+            welcome_title: "PET FRIENDLY",
             welcome_desc: "We have a playground for children and a dedicated area for dogs",
-            museum_sub: "BAIA DI POPEYE PRESENTS",
-            museum_title: "Lake Castreccioni Museum",
-            museum_desc: "La Baia di Popeye presents an exhibition space that tells, through photographs and historical documents, the story of the artificial reservoir on the Musone river, in the municipality of Cingoli (MC), built between 1981 and 1988 with the construction of a 67-metre high dam capable of creating a 240-hectare basin. The artefacts, collected also thanks to the community's contribution, offer a journey into the past to discover how human ingenuity and respect for nature gave life to this earthly paradise. The museum invites anyone with photos or documents from that era to share them for display with their signature, and to follow social media with the hashtags #BaiaDiPopeye and #LakePeople to stay updated.",
-            food_sub: "Our dishes from",
-            food_title: "LE MARCHE",
-            food_desc: "Our menu is born from a love for the cuisine of Le Marche and the desire to introduce it to those who visit the lake, whether for a day of relaxation or a dinner with friends. We offer simple but carefully prepared dishes, tied to the territory and its traditions, designed to please everyone. The stars are the warm cresce, to be opened and filled like in the old days, accompanied by rich boards of local cured meats, cheeses and specialities that tell the authentic flavours of Le Marche. Alongside tradition, we enjoy offering reinvented hamburgers with local ingredients: fragrant bread, selected meats and combinations that bring together taste and creativity without losing authenticity. Our kitchen doesn't aim to impress with special effects, but to make you feel at home. Every dish is born from the idea of sharing, of filling the table and creating that simple and cheerful atmosphere that makes even an ordinary evening special. For us, cooking means welcoming, telling the story of the territory and transforming every meal into a moment to live together, among real aromas and flavours that stay in the heart.",
+            museo_lago_title: "LAKE MUSEUM",
+            museo_lago_desc: "Discover the history of Lake Castreccioni through photographs and historical documents",
+            territorio_title: "EXPLORE THE AREA",
+            territorio_desc: "Explore the natural and cultural beauty surrounding the lake",
+            servizi_gratuiti_title: "FREE ACTIVITIES",
+            servizi_gratuiti_desc: "Volleyball court, ping pong and other games available for free",
             book_btn: "Book now!",
-            menu_btn: "Discover our Menu",
             copyright: "Copyright \u00a9 2026 La Baia di Popeye. All rights reserved."
         },
         it: {
             intro_sub: "La Baia di Popeye non \u00e8 solo un ristorante...",
             services_title: "I nostri servizi",
-            bar_title: "BAR e HAPPY HOUR",
-            bar_desc: "Una selezione di drink alcolici e analcolici per tutti i gusti",
+            bar_title: "RISTORANTE E BAR",
+            bar_desc: "Cucina marchigiana, crescia, drink e aperitivo al tramonto",
+            menu_link: "Scopri il nostro menù",
             beach_title: "SPIAGGIA",
-            beach_desc: "Noleggio lettini, ombrelloni, pedal\u00f2 e canoe",
-            boat_title: "RIMESSA NATANTI",
+            beach_desc: "Lettini e ombrelloni a partire da 1\u20AC/ora",
+            boat_title: "NOLEGGI IN ACQUA",
             boat_desc: "Attracca la tua barca nel nostro pontile per tutta la durata della pesca nel nostro posto riservato custodito non assicurato",
-            welcome_title: "TUTTI BENVENUTI",
+            welcome_title: "PET FRIENDLY",
             welcome_desc: "Abbiamo a disposizione un parco giochi per i bambini ed un area riservata ai cani",
-            museum_sub: "BAIA DI POPEYE PRESENTA",
-            museum_title: "Museo del Lago di Castreccioni ",
-            museum_desc: "La Baia di Popeye presenta , uno spazio espositivo che racconta, attraverso fotografie e documenti storici, la nascita dell\u2019invaso artificiale sul fiume Musone, nel comune di Cingoli (MC), realizzato tra il 1981 e il 1988 con la costruzione di una diga alta 67 metri e capace di creare un bacino di 240 ettari. I reperti, raccolti anche grazie al contributo della comunit\u00e0, offrono un viaggio nel passato per scoprire come l\u2019ingegno umano e il rispetto per la natura abbiano dato vita a questo paradiso terrestre. Il museo invita chiunque abbia foto o documenti dell\u2019epoca a condividerli per esporli con la propria firma, e a seguire i social con gli hashtag #BaiaDiPopeye e #LakePeople per rimanere aggiornati.",
-            food_sub: "I Nostri piatti delle ",
-            food_title: "MARCHE",
-            food_desc: "Il nostro men\u00f9 nasce dall\u2019amore per la cucina marchigiana e dalla voglia di farla conoscere a chi passa dal lago, che sia per una giornata di relax o per una cena in compagnia. Proponiamo piatti semplici ma curati, legati al territorio e alle sue tradizioni, pensati per mettere tutti d\u2019accordo. Le protagoniste sono le cresce calde, da aprire e farcire come una volta, accompagnate da taglieri ricchi di affettati locali, formaggi e specialit\u00e0 che raccontano i sapori autentici delle Marche. Accanto alla tradizione, ci divertiamo a proporre hamburger rivisitati con ingredienti del territorio: pane fragrante, carni selezionate e abbinamenti che uniscono gusto e creativit\u00e0 senza perdere genuinit\u00e0.La nostra cucina non vuole stupire con effetti speciali, ma far sentire a casa. Ogni piatto nasce dall\u2019idea di condividere, di riempire la tavola e di creare quel clima semplice e allegro che rende speciale anche una serata qualunque. Per noi cucinare significa accogliere, raccontare il territorio e trasformare ogni pasto in un momento da vivere insieme, tra profumi veri e sapori che restano nel cuore.",
+            museo_lago_title: "MUSEO LAGO",
+            museo_lago_desc: "Scopri la storia del Lago di Castreccioni attraverso fotografie e documenti storici",
+            territorio_title: "SCOPRI IL TERRITORIO",
+            territorio_desc: "Esplora le bellezze naturali e culturali dei dintorni del lago",
+            servizi_gratuiti_title: "SERVIZI GRATUITI",
+            servizi_gratuiti_desc: "Campo da pallavolo, ping pong e altri giochi a disposizione gratuita",
             book_btn: "Prenota ora!",
-            menu_btn: "Scopri il nostro Men\u00f9",
             copyright: "Copyright \u00a9 2026 La Baia di Popeye. Tutti i diritti sono riservati."
         }
     };
+
+    var serviceModalData = {
+        ristorante: {
+            images: ['images/tagliere.jpg'],
+            title: { it: 'RISTORANTE E BAR', en: 'RESTAURANT & BAR' },
+            text: {
+                it: '<p>La nostra cucina propone i piatti della tradizione marchigiana preparati con ingredienti freschi e locali: taglieri di salumi e formaggi, insalate, panini e l\'immancabile crescia marchigiana, il nostro prodotto tipico da non perdere.</p><p>Il bar offre una vasta selezione di drink, cocktail, birre artigianali, vini locali e bevande analcoliche. Concediti un aperitivo al tramonto con vista sul lago!</p>',
+                en: '<p>Our kitchen serves traditional Marche cuisine made with fresh, local ingredients: charcuterie boards, salads, sandwiches, and the unmissable crescia marchigiana, our signature local specialty.</p><p>The bar offers a wide selection of drinks, cocktails, craft beers, local wines, and soft beverages. Treat yourself to a sunset aperitivo overlooking the lake!</p>'
+            }
+        },
+        spiaggia: {
+            images: ['images/1.jpg', 'images/2.jpeg'],
+            title: { it: 'SPIAGGIA', en: 'BEACH' },
+            text: {
+                it: '<p>La nostra spiaggia attrezzata ti offre tutto il comfort per una giornata di relax sulle rive del lago. Lettini e ombrelloni sono disponibili a noleggio per garantirti il massimo comfort.</p><p><strong>Prezzi:</strong> Lettino 1\u20AC/ora — Ombrellone 1\u20AC/ora</p>',
+                en: '<p>Our equipped beach offers all the comfort for a relaxing day on the shores of the lake. Sun loungers and umbrellas are available for rent to ensure maximum comfort.</p><p><strong>Prices:</strong> Sun lounger 1\u20AC/hour — Umbrella 1\u20AC/hour</p>'
+            }
+        },
+        noleggi: {
+            images: ['images/3.jpeg'],
+            title: { it: 'NOLEGGI IN ACQUA', en: 'WATER RENTALS' },
+            text: {
+                it: '<p>Offriamo un servizio di attracco per la tua barca presso il nostro pontile privato. Potrai lasciare la tua imbarcazione in sicurezza per tutta la durata della tua visita.</p><p>Il posto barca è riservato, custodito e non assicurato. Ideale per chi vuole dedicarsi alla pesca sportiva nel lago senza preoccupazioni.</p>',
+                en: '<p>We offer a docking service for your boat at our private pier. You can safely leave your vessel for the entire duration of your visit.</p><p>The berth is reserved, supervised, and uninsured. Ideal for those who want to enjoy sport fishing on the lake without worries.</p>'
+            }
+        },
+        pet: {
+            images: ['images/4.jpg'],
+            title: { it: 'PET FRIENDLY', en: 'PET FRIENDLY' },
+            text: {
+                it: '<p>La Baia di Popeye accoglie i tuoi amici a quattro zampe! Abbiamo un\'area dedicata dove i cani possono correre e giocare liberamente in totale sicurezza.</p><p>Per i più piccoli, è disponibile un parco giochi attrezzato con scivoli, altalene e giochi per divertirsi all\'aria aperta circondati dalla natura.</p>',
+                en: '<p>La Baia di Popeye welcomes your four-legged friends! We have a dedicated area where dogs can run and play freely in complete safety.</p><p>For the little ones, there is a playground equipped with slides, swings, and games to have fun outdoors surrounded by nature.</p>'
+            }
+        },
+        museo: {
+            images: ['images/museo.png'],
+            title: { it: 'MUSEO LAGO', en: 'LAKE MUSEUM' },
+            text: {
+                it: '<p>Il Museo del Lago di Castreccioni raccoglie fotografie storiche, documenti e reperti che raccontano la storia della costruzione della diga e la nascita del lago artificiale.</p><p>Un percorso espositivo che ti guiderà alla scoperta delle tradizioni locali, della vita dei borghi sommersi e dell\'evoluzione del territorio nel corso dei decenni.</p>',
+                en: '<p>The Lake Castreccioni Museum houses historical photographs, documents, and artifacts that tell the story of the dam\'s construction and the birth of the artificial lake.</p><p>An exhibition path that will guide you through the discovery of local traditions, the life of submerged villages, and the evolution of the territory over the decades.</p>'
+            }
+        },
+        territorio: {
+            images: ['images/Lago.jpg'],
+            title: { it: 'SCOPRI IL TERRITORIO', en: 'EXPLORE THE AREA' },
+            text: {
+                it: '<p>Il Lago di Castreccioni è circondato da colline, boschi e borghi medievali che meritano di essere esplorati. Sentieri naturalistici, percorsi in mountain bike e passeggiate panoramiche ti aspettano.</p><p>Visita i borghi storici dei dintorni, scopri le chiese romaniche, le tradizioni enogastronomiche e lasciati incantare dalla bellezza incontaminata dell\'entroterra marchigiano.</p>',
+                en: '<p>Lake Castreccioni is surrounded by hills, woods, and medieval villages worth exploring. Nature trails, mountain bike routes, and panoramic walks await you.</p><p>Visit the historic villages nearby, discover Romanesque churches, food and wine traditions, and be enchanted by the unspoiled beauty of the Marche hinterland.</p>'
+            }
+        },
+        servizi: {
+            images: ['images/SfondoMain.jpg'],
+            title: { it: 'SERVIZI GRATUITI', en: 'FREE ACTIVITIES' },
+            text: {
+                it: '<p>Alla Baia di Popeye mettiamo a disposizione gratuitamente un campo da pallavolo, un tavolo da ping pong e diversi giochi all\'aperto per grandi e piccini.</p><p>Tutto quello che serve per trascorrere una giornata di divertimento e sport immersi nella natura, senza costi aggiuntivi. Vieni a giocare con noi!</p>',
+                en: '<p>At La Baia di Popeye, we provide a volleyball court, a ping pong table, and various outdoor games for young and old, all free of charge.</p><p>Everything you need to spend a day of fun and sports surrounded by nature, at no additional cost. Come play with us!</p>'
+            }
+        }
+    };
+
+    function openServiceModal(serviceId) {
+        var data = serviceModalData[serviceId];
+        if (!data) return;
+        var lang = currentLang;
+        var imagesContainer = document.getElementById('serviceModalImages');
+        imagesContainer.innerHTML = '';
+        imagesContainer.className = 'service-modal-images' + (data.images.length > 1 ? ' multi-image' : ' single-image');
+        for (var i = 0; i < data.images.length; i++) {
+            var img = document.createElement('img');
+            img.src = data.images[i];
+            img.alt = data.title[lang];
+            imagesContainer.appendChild(img);
+        }
+        document.getElementById('serviceModalTitle').textContent = data.title[lang];
+        document.getElementById('serviceModalText').innerHTML = data.text[lang];
+        var overlay = document.getElementById('serviceModalOverlay');
+        overlay.style.display = 'flex';
+        requestAnimationFrame(function() {
+            overlay.classList.add('active');
+        });
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeServiceModal(event, force) {
+        if (force || event.target === document.getElementById('serviceModalOverlay')) {
+            var overlay = document.getElementById('serviceModalOverlay');
+            overlay.classList.remove('active');
+            setTimeout(function() {
+                overlay.style.display = 'none';
+            }, 300);
+            document.body.style.overflow = '';
+        }
+    }
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeServiceModal(e, true);
+    });
 
     function toggleLanguage() {
         if (currentLang === 'it') {

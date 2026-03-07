@@ -152,21 +152,7 @@ function focus_populate_live_region(){var e=["woocommerce-message","woocommerce-
 (function () {
                 window.lvca_fs = {can_use_premium_code: false};
             })();;
-jQuery(document).ready(function($) {
-  // 1) Aggiunge il link a Instagram nei div .red-social.size-28
-  $('.red-social.size-28').append(
-    ' <a href="https://www.instagram.com/baiadipopeye_lago_di_cingoli/" target="_blank">' +
-    '   <span class="social-icon fab fa-instagram"></span>' +
-    ' </a>'
-  );
-
-  // 2) Sostituisce il contenuto di <ul class="contact"> con il nuovo codice
-  $('ul.contact').html(
-        '<li><a href="https://maps.app.goo.gl/tF9uDrbXbFaLMZVVA" target="_blank" style="font-size:20px;"><i class="fas fa-map-marker-alt"></i></a></li>' +
-        '<li>Lun - Dom: 09:00 - 22:00</li>' +
-        '<li>TEL: +39 347 565 6722</li>'
-  );
-});;
+;;
 (function () {
 			var c = document.body.className;
 			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');

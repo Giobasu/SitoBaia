@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" width="440" height="440">
+  <g fill="none" stroke="#1a8a7d" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Map body - folded map shape -->
+    <path d="M85,92 C87,91 165,117 170,120 C175,118 270,87 278,90 C283,88 348,108 352,112 C353,160 350,300 348,342 C345,343 272,319 267,322 C262,324 172,351 168,352 C163,353 90,332 88,330 C87,275 86,147 85,92 Z"/>
+    <!-- Left fold line -->
+    <path d="M170,120 C169,185 168,290 168,352"/>
+    <!-- Right fold line -->
+    <path d="M278,90 C277,155 268,262 267,322"/>
+    <!-- Location pin -->
+    <path d="M222,160 C243,160 260,177 260,198 C260,222 222,260 222,260 C222,260 184,222 184,198 C184,177 201,160 222,160 Z"/>
+    <circle cx="222" cy="196" r="11" fill="#1a8a7d"/>
+    <!-- Small path/trail line -->
+    <path d="M135,280 C155,260 185,275 210,268 C235,260 255,272 305,248" stroke-width="6" stroke-dasharray="10,14"/>
+  </g>
+</svg>

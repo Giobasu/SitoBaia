@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" width="440" height="440">
+  <g fill="none" stroke="#1a8a7d" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Rim ellipse -->
+    <path d="M148,98 C158,78 278,76 292,100 C282,120 160,122 148,98"/>
+    <!-- Wavy liquid line -->
+    <path d="M160,152 C180,140 200,162 222,152 C244,140 266,160 284,148"/>
+    <!-- Bowl left side -->
+    <path d="M148,100 C140,142 144,192 178,222 C200,238 216,244 222,246"/>
+    <!-- Bowl right side -->
+    <path d="M292,100 C300,142 296,192 262,222 C240,238 228,244 222,246"/>
+    <!-- Stem with gentle curve -->
+    <path d="M222,246 C218,270 215,298 218,324 C220,338 222,348 220,356"/>
+    <!-- Base ellipse -->
+    <path d="M158,360 C166,340 274,338 282,360 C276,380 166,382 158,360"/>
+  </g>
+</svg>

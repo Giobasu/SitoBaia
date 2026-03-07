@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" width="440" height="440">
+  <g fill="none" stroke="#1a8a7d" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Ball circle -->
+    <circle cx="220" cy="200" r="120"/>
+    <!-- Seam 1: curved vertical center -->
+    <path d="M224,80 C196,140 196,258 224,320"/>
+    <!-- Seam 2: curves from upper-left down to lower-left -->
+    <path d="M122,112 C170,162 190,228 158,310"/>
+    <!-- Seam 3: curves from upper-right down to lower-right -->
+    <path d="M320,112 C272,162 250,228 282,310"/>
+    <!-- Cross seam detail upper -->
+    <path d="M152,134 C180,148 264,148 292,134" stroke-width="7"/>
+    <!-- Cross seam detail lower -->
+    <path d="M142,272 C175,256 265,256 298,272" stroke-width="7"/>
+    <!-- Ground shadow -->
+    <path d="M165,365 C188,356 252,356 275,365" stroke-width="7"/>
+  </g>
+</svg>
