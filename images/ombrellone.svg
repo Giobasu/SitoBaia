@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" width="440" height="440">
+  <g fill="none" stroke="#1a8a7d" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"
+     transform="rotate(-20, 250, 390)">
+    <!-- Canopy dome -->
+    <path d="M100,165 Q250,35 400,165"/>
+    <!-- Ribs from hub to canopy rim -->
+    <line x1="250" y1="155" x2="100" y2="165"/>
+    <line x1="250" y1="155" x2="150" y2="165"/>
+    <line x1="250" y1="155" x2="200" y2="165"/>
+    <line x1="250" y1="155" x2="250" y2="165"/>
+    <line x1="250" y1="155" x2="300" y2="165"/>
+    <line x1="250" y1="155" x2="350" y2="165"/>
+    <line x1="250" y1="155" x2="400" y2="165"/>
+    <!-- Scalloped skirt -->
+    <path d="M100,165 C110,188 140,188 150,165 C160,142 190,142 200,165 C210,188 240,188 250,165 C260,142 290,142 300,165 C310,188 340,188 350,165 C360,142 390,142 400,165"/>
+    <!-- Pole -->
+    <line x1="250" y1="390" x2="250" y2="155"/>
+  </g>
+  <!-- Sand wave — horizontal, outside rotation -->
+  <path d="M140,395 C160,383 180,407 210,395 C240,383 260,407 290,395 C320,383 340,407 360,395" fill="none" stroke="#1a8a7d" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

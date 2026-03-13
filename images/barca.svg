@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" width="440" height="440">
+  <g fill="none" stroke="#156f73" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Hull — hand-drawn curved bottom, slightly wobbly -->
+    <path d="M72,295 C82,290 118,287 165,285 C195,284 230,285 265,285 C308,285 358,287 371,293"
+          stroke-width="10"/>
+    <path d="M72,295 C82,316 100,340 132,352 C162,363 192,368 222,367 C252,368 283,363 312,351 C342,340 360,317 371,293"
+          stroke-width="10"/>
+    <!-- extra wobbly top rim of hull -->
+    <path d="M74,296 C120,292 175,290 222,290 C268,290 322,292 370,295"
+          stroke-width="5" opacity="0.5"/>
+
+    <!-- Mast — slightly off-vertical doodle line -->
+    <path d="M221,287 C220,260 219,228 218,190 C217,162 216,138 215,112"
+          stroke-width="9"/>
+
+    <!-- Main triangular sail — big, slightly bowed curves -->
+    <path d="M215,118 C238,148 268,185 298,220 C322,248 348,272 365,289"
+          stroke-width="9"/>
+    <path d="M365,289 C330,289 278,288 222,288"
+          stroke-width="9"/>
+    <path d="M222,288 C221,255 219,205 216,160 C215,143 215,128 215,120"
+          stroke-width="9"/>
+    <!-- sail inner tension line — subtle sketch mark -->
+    <path d="M220,200 C265,230 318,268 358,286"
+          stroke-width="3.5" opacity="0.35"/>
+
+    <!-- Small pennant flag at top -->
+    <path d="M215,112 C224,107 236,110 243,105 C248,100 244,93 236,96 C228,99 220,98 215,94"
+          stroke-width="8"/>
+
+    <!-- Water lines — irregular wavy scribbles, 3 rows -->
+    <path d="M42,378 C58,370 74,382 96,373 C118,364 136,377 160,368 C184,359 200,374 224,365 C248,356 265,371 290,362 C315,353 334,368 358,360 C374,354 394,364 412,357"
+          stroke-width="7.5"/>
+    <path d="M50,402 C68,393 86,408 110,398 C134,388 152,403 176,393 C200,383 220,398 244,388 C268,378 288,393 312,384 C328,378 348,389 370,382 C386,377 404,386 418,380"
+          stroke-width="7"/>
+    <path d="M46,390 C65,381 83,395 108,385 C133,375 151,390 175,381 C199,372 218,386 242,377 C266,368 285,382 310,373 C333,365 356,377 376,370 C392,364 406,373 420,367"
+          stroke-width="4.5" opacity="0.45"/>
+
+  </g>
+</svg>
